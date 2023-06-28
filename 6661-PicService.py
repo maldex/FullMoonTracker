@@ -7,7 +7,7 @@ from yattag import Doc
 from pprint import pprint
 
 from flask import Flask, request, Response, render_template, send_from_directory, send_file, abort, redirect
-os.environ["DISPLAY"] = "poseidon:0"
+os.environ["DISPLAY"] = ":0"
 os.environ["OPENCV_FFMPEG_CAPTURE_OPTIONS"] = "rtsp_transport;tcp"
 vcap = cv2.VideoCapture("rtsp://127.0.0.1:8554/cam", cv2.CAP_FFMPEG)  #"rtmp://10.83.6.197/cam"
 
