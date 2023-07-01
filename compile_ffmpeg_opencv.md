@@ -14,6 +14,10 @@ sudo /etc/init.d/dphys-swapfile restart
 sudo setfacl -m u:`whoami`:rwX /usr/local/src/
 
 libcamera-hello --list-cameras
+sudo vclog -m | grep -i imx
+dmesg | grep -i imx
+vcgencmd get_camera
+i2cdetect -y 10
 
 sudo reboot
 ```
@@ -53,6 +57,7 @@ EOF
 
 sudo systemctl enable --now ~pi/mediamtx.service
 ```
+-> rtsp://10.83.6.99:8554/cam
 
 # install build system
 ```bash
